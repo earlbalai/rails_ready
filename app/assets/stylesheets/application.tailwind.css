@@ -3,9 +3,13 @@
 @tailwind utilities;
 
 header.global {
-  @apply flex items-center h-16 bg-slate-400 mb-5 px-5 text-white;
+  @apply flex items-center h-16 bg-[#dfe6e9] mb-5 px-5;
 }
 
 header.global nav {
   @apply ml-auto flex items-center;
+}
+
+header.global .logo {
+  @apply font-semibold
 }

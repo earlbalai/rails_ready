@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   # User Routes
   resources :users, only: %i[create show]
-  get 'signup', to: 'users#sign_up', as: 'sign_up'
+  get 'sign_up', to: 'users#sign_up', as: 'sign_up'
   # Session Routes
   scope :sessions, path: '/' do
     get 'sign_in', to: 'sessions#sign_in'

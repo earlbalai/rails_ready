@@ -1,5 +1,5 @@
 <header class="global">
-  <div class="logo">Rails Ready</div>
+  <div class="logo"><%= link_to "Rails Ready", root_path %></div>
   <nav>
     <% if signed_in? %>
       <%= link_to "Sign Out", sessions_path, data: { turbo_method: :delete } %>
