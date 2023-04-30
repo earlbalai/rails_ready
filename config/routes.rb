@@ -1,12 +1,12 @@
 Rails.application.routes.draw do
   # User Routes
-  resources :users, only: %i[create]
-  get 'signup', to: 'users#new'
+  resources :users, only: %i[create show]
+  get 'signup', to: 'users#sign_up', as: 'sign_up'
   # Session Routes
-  scope :sessions do
+  scope :sessions, path: '/' do
     get 'sign_in', to: 'sessions#sign_in'
-    post 'sessions', to: 'session#authenticate'
-    delete 'sessions', to: 'session#destroy'
+    post 'sessions', to: 'sessions#authenticate'
+    delete 'sessions', to: 'sessions#destroy'
   end
 
   # Defines the root path route ("/")

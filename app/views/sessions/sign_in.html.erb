@@ -1,0 +1,15 @@
+<div class="w-full h-full flex flex-col items-center justify-center">
+  <h1>Sign In</h1>
+  <%= form_for :session, url: sessions_path, html: {class: 'flex flex-col space-y-2'} do |f| %>
+    <div class="flex flex-col space-y-1">
+      <%= f.label "Username/Email" %>
+      <%= f.text_field :login, class: 'border rounded-full px-3 py-1' %>
+    </div>
+    <div class="flex flex-col space-y-1">
+      <%= f.label "Password" %>
+      <%= f.password_field :password, class: 'border rounded-full px-3 py-1'%>
+    </div>
+    <%= f.submit "Sign In", class: 'bg-indigo-500 text-white font-semibold px-3 py-1 w-full rounded-full' %>
+    <small class="text-center">Don't have an account? <%= link_to "Sign up", sign_up_path, class: 'underline text-indigo-500' %></small>
+  <% end %>
+</div>
