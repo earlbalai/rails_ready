@@ -8,4 +8,12 @@ class User < ApplicationRecord
   def has_admin_perms?
     role_admin? || role_super_admin?
   end
+
+  def super_admin?
+    role_super_admin?
+  end
+
+  def admin?
+    role_admin?
+  end
 end
